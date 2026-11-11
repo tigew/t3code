@@ -154,7 +154,7 @@ export function PullRequestReviewersScreen({ route }: StaticScreenProps<PullRequ
           ref={listRef}
           data={candidates}
           keyExtractor={(candidate) => `${candidate.kind}:${candidate.id}`}
-          renderScrollComponent={NativeScrollView}
+          renderScrollComponent={(props) => <NativeScrollView {...props} />}
           contentInsetAdjustmentBehavior="automatic"
           automaticallyAdjustKeyboardInsets
           keyboardDismissMode="on-drag"

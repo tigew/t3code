@@ -342,7 +342,7 @@ function ReviewFileNavigator({ files, sectionId, onSelectFile, ref }: ReviewFile
       />
       <ScreenContent insetHorizontal>
         <FlatList
-          renderScrollComponent={NativeScrollView}
+          renderScrollComponent={(props) => <NativeScrollView {...props} />}
           data={files}
           extraData={selectedFileId}
           keyExtractor={(file) => file.id}
